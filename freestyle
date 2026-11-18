@@ -1,0 +1,22 @@
+cd /home/iot/IdeaProjects/GrossSalary
+
+mkdir -p out
+
+javac -d out src/GrossSalary.java
+
+java -cp out GrossSalary <<EOF
+20000
+5000
+3000
+EOF
+
+
+cd /home/iot/IdeaProjects/NumberCheck
+
+mkdir -p out
+
+javac -d out src/NumberCheck.java
+
+java -cp out NumberCheck <<EOF
+10
+EOF
