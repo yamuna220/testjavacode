@@ -1,0 +1,23 @@
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class DiscountTest {
+
+    Discount discount = new Discount();
+
+    @Test
+    public void testBelow1000() {
+        assertEquals(0.0, discount.calculateDiscount(800), 0.01);
+    }
+
+    @Test
+    public void testEqualTo1000() {
+        assertEquals(100.0, discount.calculateDiscount(1000), 0.01);
+    }
+
+    @Test
+    public void testAbove1000() {
+        assertEquals(200.0, discount.calculateDiscount(2000), 0.01);
+    }
+}
