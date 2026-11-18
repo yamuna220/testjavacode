@@ -1,0 +1,26 @@
+
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/YOUR_USERNAME/Palindrome.git'
+            }
+        }
+
+        stage('Compile') {
+            steps {
+                sh 'mkdir -p out && javac -d out src/Palindrome.java'
+            }
+        }
+
+        stage('Execute') {
+            steps {
+                sh 'echo 121 | java -cp out Palindrome'
+            }
+        }
+    }
+}
