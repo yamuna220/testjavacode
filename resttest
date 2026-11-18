@@ -1,0 +1,28 @@
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class ResultTest {
+
+    Result result = new Result();
+
+    @Test
+    public void testMark35() {
+        assertEquals("Fail", result.checkResult(35));
+    }
+
+    @Test
+    public void testMark50() {
+        assertEquals("Pass", result.checkResult(50));
+    }
+
+    @Test
+    public void testMark75() {
+        assertEquals("Pass", result.checkResult(75));
+    }
+
+    @Test
+    public void testMark100() {
+        assertEquals("Pass", result.checkResult(100));
+    }
+}
