@@ -1,0 +1,28 @@
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class LeapYearTest {
+
+    LeapYear leap = new LeapYear();
+
+    @Test
+    public void testLeapYear() {
+        assertTrue(leap.checkLeapYear(2024));
+    }
+
+    @Test
+    public void testNonLeapYear() {
+        assertFalse(leap.checkLeapYear(2023));
+    }
+
+    @Test
+    public void testCenturyLeapYear() {
+        assertTrue(leap.checkLeapYear(2000));
+    }
+
+    @Test
+    public void testCenturyNonLeapYear() {
+        assertFalse(leap.checkLeapYear(1900));
+    }
+}
